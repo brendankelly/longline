@@ -20,7 +20,7 @@ longlineplot <- function(long_line_df=longline_example,rect_fill="grey80",rect_c
   long_line_df <- ddply(long_line_df,.(subject),transform, subject_label=replace(subject_label,seq(length(subject_label)-1),NA))
   long_line_df$subject_label_y <- mean(unique(long_line_df$exposure_number))
   time_range <- diff(range(c(long_line_df$enroll,long_line_df$exit)))
-  long_line_df$subject_label_x <- long_line_df$enroll - 0.1*time_range
+  long_line_df$subject_label_x <- long_line_df$enroll - 0.2*time_range
   p <- ggplot(long_line_df)
   p <- p + geom_rect(aes_string(xmin="enroll",xmax="exit",ymin=0,ymax=max("exposure_number")),fill=rect_fill,colour=rect_color)
   p <- p + geom_segment(aes_string(x="exposure_start",xend="exposure_end",y="exposure_number",yend="exposure_number",colour="exposure"),width=0.5)
