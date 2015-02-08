@@ -1,0 +1,18 @@
+Package: longline
+Title: Plot longitudinal data over time.
+Version: 0.1
+Author: Brendan J. Kelly
+Maintainer: Brendan J. Kelly <br3nd2n@gmail.com>
+Description: Convenience function produces plot of longitudinal exposure data
+    over time. Includes example data to demonstrate proper format of input data
+    frame.
+URL: http://github.com/brendankelly/longline
+Depends:
+    R (>= 3.0),
+    stats
+Imports:
+    ggplot2,
+    plyr,
+    grid
+License: GPL-2
+LazyData: true
